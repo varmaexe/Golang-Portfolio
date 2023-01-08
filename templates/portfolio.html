@@ -1,0 +1,143 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="/templates/assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        *{
+ margin: 0px;
+ padding: 0px;
+}
+body{
+ font-family: arial;
+}
+.main{
+
+ margin: 2%;
+}
+
+.card{
+     width: 17%;
+     display: inline-block;
+     box-shadow: 2px 2px 20px black;
+     border-radius: 5px; 
+     margin: 2%;
+     left: 100px;
+     position: relative;
+    }
+
+.image img{
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+ }
+ .card:hover{
+    -webkit-transform: scale(1.1);
+     -ms-transform: scale(1.1);
+     transform: scale(1.1);
+     transition: .6s;
+   }
+
+.title{
+ 
+  text-align: center;
+  padding: 10px;
+  
+ }
+
+h1{
+  font-size: 20px;
+ }
+.des a button{
+    font-weight: bold;
+}
+.des{
+  padding: 3px;
+  text-align: center;
+ color: aliceblue;
+ 
+ /* font-family: sans-serif; */
+  padding-top: 10px;
+        border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: rgb(0, 0, 0) ;
+}
+button{
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 0.1px solid black;
+  border-radius: 5px;
+  padding:10px;
+}
+button:hover{
+  background-color: rgb(255, 111, 0);
+  color: rgb(0, 0, 0);
+  transition: .5s;
+  cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="/templates/assets/images/logo.png" class="logo">
+            <ul>
+                <li><a href="/view">HOME</a></li>
+                <li><a href="/view/skills">SKILLS</a></li>
+                <li><a href="/view/portfolio">PORTFOLIO</a></li>
+                <li><a href="/view/contact">CONTACT</a></li>
+                <li><a href="/view/loginpage">LOGIN</a></li>
+            </ul>
+        </nav>
+        <!-- ------------------------------------- -->
+        div class="main">
+
+            <!-- card -->
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/templates/assets/images/Portfolio/output-onlinepngtools.png">
+                </div>
+               
+                <div class="des">
+                    <p>This is a simple weather tracker made using Golang</p>
+                    <a href="/view/weatherhome" target="_blank"> <button>Launch</button> </a>
+                </div>
+            </div>
+
+            <!-- card -->
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/templates/assets/images/Portfolio/goslack.png">
+                </div>
+               
+                <div class="des">
+                    <p>This is a slack bot which uploads any given file.</p>
+                   <a href="https://discord.gg/H7D8ZGJG" target="_blank"> <button> Launch</button> </a>
+                </div>
+            </div>
+
+            <!-- card -->
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="/templates/assets/images/Portfolio/curdapi.png">
+                </div>
+                
+                <div class="des">
+                    <p>This is simple crud api where different users can create posts</p>
+                   <a href="/view/posts/homepage" target="_blank"> <button>Launch</button> </a>
+                </div>
+            </div>
+ 
+            <!-- card -->
+        </div>
+        
+    </div>

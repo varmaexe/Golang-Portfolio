@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postgres CRUD</title>
+      <link rel="stylesheet" href="/templates/assets/css/posts.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+   <a href="/view/posts/homepage"> <img class="logo" src="/templates/assets/images/Portfolio/Oh Crud!.png"  alt="logo"></a>
+    <div class="left">
+        <input type="checkbox" id="show">
+        <label for="show" class="show-btn" >Update a Post</label>
+        <div class="container">
+           <label for="show" class="close-btn fas fa-times" title="close"></label>
+           <div class="text">
+              Update a Post
+           </div>
+           <form action="/api/postsupdate" method="post">
+              <div class="data">
+                 <label>ID</label>
+                 <input type="text" name="id" required>
+              </div>
+              <div class="data">
+                <label>Title</label>
+                <input type="text" name="Title" required>
+             </div>
+              <div class="data">
+                 <label>Body</label>
+                 <input type="text" name="Body" required>
+              </div>
+              <div class="update-post">
+                 <a href="/view/post/delete">Delete a post?</a>
+              </div>
+              <div class="btn">
+                 <div class="inner"></div>
+                 <button type="submit">Update</button>
+              </div>
+              <div class="signup-link">
+                 Create a post? <a href="/view/posts/createpost">Create</a>
+              </div>
+           </form>
+        </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>login</title>
+    <link rel="stylesheet" href="/templates/assets/styles.css">
+    <!-- <link rel="stylesheet" href="/skills.css" /> -->
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="/templates/assets/images/logo.png" class="logo">
+        <ul>
+          <li><a href="/view">HOME</a></li>
+          <li><a href="/view/skills">SKILLS</a></li>
+          <li><a href="/view/portfolio">PORTFOLIO</a></li>
+          <li><a href="/view/contact">CONTACT</a></li>
+          <li><a href="/view/loginpage">LOGIN</a></li>
+        </ul>
+    </nav>
+    <div class="logpage"> 
+            <div class="text">
+               Member login
+            </div>
+            <form action="/api/login" method="post">
+               <div class="data">
+                  <label>Email or Phone</label>
+                  <input type="email" name="email" required>
+               </div>
+               <div class="data">
+                  <label>Password</label>
+                  <input type="password" name="password" required>
+               </div>
+               <div class="btn">
+                  <div class="inner"></div>
+                  <button type="submit">login</button>
+               </div>
+               <div class="signup-link">
+                  Not a member? <a href="/view/signuppage">Signup now</a>
+               </div>
+            </form>
+         </div>
+    </div>
+  </body>
+</html>

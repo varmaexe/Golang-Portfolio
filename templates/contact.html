@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>hire</title>
+      <link rel="stylesheet" href="/templates/assets/styles.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+   <body>
+    <div class="hero">
+      <nav>
+         <img src="/templates/assets/images/logo.png" class="logo">
+         <ul>
+             <li><a href="/view">HOME</a></li>
+             <li><a href="/view/skills">SKILLS</a></li>
+             <li><a href="/view/portfolio">PORTFOLIO</a></li>
+             <li><a href="/view/contact">CONTACT</a></li>
+             <li><a href="/view/loginpage">LOGIN</a></li>
+         </ul>
+     </nav>
+    <div class="container">
+        <div class="text">Contact me!</div>
+        <form action="/api/contactform" method="post">
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" name="name" required>
+                 <div class="underline"></div>
+                 <label for="">Name</label>
+              </div>
+             
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" name="email" required>
+                 <div class="underline"></div>
+                 <label for="">Email Address</label>
+              </div>
+              
+            </div>
+            <div class="form-row">
+                <div class="input-data">
+                   <input type="text" name="message" required>
+                   <div class="underline"></div>
+                   <label for="">Write your message</label>
+                </div>
+            </div>
+            <div>
+                <input class="submit-btn" type="submit" value="send" >
+            </div>
+        </form>
+     </div>
+   </body>
+</html>

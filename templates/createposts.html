@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Postgres CRUD</title>
+      <link rel="stylesheet" href="/templates/assets/css/posts.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <a href="/view/posts/homepage"> <img class="logo" src="/templates/assets/images/Portfolio/Oh Crud!.png"  alt="logo"></a>
+      <div class="center">
+         <input type="checkbox" id="show">
+         <label for="show" class="show-btn">Create a Post</label>
+         <div class="container">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">
+               Create Post
+            </div>
+            <form action="/api/posts/create" method="post">
+               <div class="data">
+                  <label>Title</label>
+                  <input type="text" name="Title" required>
+               </div>
+               <div class="data">
+                  <label>Body</label>
+                  <input type="text" name="Body" required>
+               </div>
+               <div class="update-post">
+                  <a href="/view/post/delete">Delete a post?</a>
+               </div>
+               <div class="btn">
+                  <div class="inner"></div>
+                  <button type="submit">Create</button>
+               </div>
+               <div class="signup-link">
+                  Edit a post? <a href="/view/postsupdate">Update</a>
+               </div>
+            </form>
+         </div>
+      </div>
+
+      
+   </body>
+
+
+   
+</html>
