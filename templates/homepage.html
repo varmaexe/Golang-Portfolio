@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verifier</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <!-- <img src="/assets/image.jpg" alt=""> -->
+    <div class="title">
+    <h1>Email Verifier</h1>
+    <div class="des">
+        <p>This tool verifies if the given domain has email service</p>
+    </div>
+    </div>
+    <div class="container">
+    <form method="post" action="/homepage">
+        <!-- <label for="address">address</label> -->
+        <input type="text" name="address" placeholder="Enter address">
+        <input type="submit" name="submit" value="Submit" id="submit">
+    </form>
+    </div>
+    <div class="result">
+    {{if . }}
+    <h2>This domain has an email service <span style='font-size:20px;'>&#128512;</span> </h2> 
+    {{else}}
+    <h2>This domain doesn't have an email service<span style='font-size:20px;'>&#128542;</span></h2>
+    {{end}}
+    </div>
+</body>
+</html>

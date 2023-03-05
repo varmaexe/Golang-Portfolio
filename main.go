@@ -37,11 +37,11 @@ func main() {
 		apiRoutes.POST("/contactform", controllers.Contactform)
 		apiRoutes.POST("/weather", middleware.RequireAuth, weather.GetWeatherDataFromApi)
 
-		apiRoutes.POST("/posts/create", controllers.PostsCreate)
-		apiRoutes.GET("/allposts", controllers.PostsIndex)
-		apiRoutes.GET("/postshow", controllers.PostShow)
-		apiRoutes.POST("/postsupdate", controllers.PostUpdate)
-		apiRoutes.POST("/posts/delete", controllers.PostsDelete)
+		apiRoutes.POST("/posts/create", middleware.RequireAuth, controllers.PostsCreate)
+		apiRoutes.GET("/allposts", middleware.RequireAuth, controllers.PostsIndex)
+		apiRoutes.GET("/postshow", middleware.RequireAuth, controllers.PostShow)
+		apiRoutes.POST("/postsupdate", middleware.RequireAuth, controllers.PostUpdate)
+		apiRoutes.POST("/posts/delete", middleware.RequireAuth, controllers.PostsDelete)
 	}
 	viewRoutes := r.Group("/view")
 	{
@@ -52,10 +52,10 @@ func main() {
 		viewRoutes.GET("/contact", controllers.Contactpage)
 		viewRoutes.GET("/portfolio", controllers.Portfolio)
 		viewRoutes.GET("/weatherhome", middleware.RequireAuth, controllers.WeatherHome)
-		viewRoutes.GET("/posts/createpost", controllers.PostsCreatePage)
-		viewRoutes.GET("/posts/homepage", controllers.PostPage)
-		viewRoutes.GET("/postsupdate", controllers.PostUpdatePage)
-		viewRoutes.GET("/post/delete", controllers.PostsDeletePage)
+		viewRoutes.GET("/posts/createpost", middleware.RequireAuth, controllers.PostsCreatePage)
+		viewRoutes.GET("/posts/homepage", middleware.RequireAuth, controllers.PostPage)
+		viewRoutes.GET("/postsupdate", middleware.RequireAuth, controllers.PostUpdatePage)
+		viewRoutes.GET("/post/delete", middleware.RequireAuth, controllers.PostsDeletePage)
 
 	}
 	r.Run()
